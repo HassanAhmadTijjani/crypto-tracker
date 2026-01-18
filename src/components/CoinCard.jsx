@@ -9,7 +9,7 @@ const CoinCard = ({ coin, onClick }) => {
                 <div className="flex items-center gap-4">
                     <img src={coin.image} alt={coin.name} className="w-10 h-10" />
                     <div>
-                        <h3 className="font-bold">{coin.name}</h3>
+                        <h3 className="font-bold text-gray-500">{coin.name}</h3>
                         <p className="text-gray-400 text-sm">{coin.symbol.toUpperCase()}</p>
                     </div>
                 </div>
