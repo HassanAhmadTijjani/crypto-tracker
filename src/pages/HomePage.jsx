@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useState } from 'react'
 import { fetchTopCoins } from '../services/coinGeckoAPI'
-import SearchBar from '../components/searchBar';
+import SearchBar from '../components/SearchBar';
 import { useNavigate } from 'react-router-dom';
  import CoinCard from '../components/CoinCard';
 

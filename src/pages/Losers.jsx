@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { fetchTopCoins } from '../services/coinGeckoAPI';
-import SearchBar from '../components/searchBar';
+import SearchBar from '../components/SearchBar';
 import CoinCard from '../components/CoinCard';
 
 
