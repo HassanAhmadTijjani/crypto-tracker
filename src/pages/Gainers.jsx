@@ -30,14 +30,14 @@ const Gainers = () => {
         getGainers();
     }, []);
     // Filtered Coins Based On SEarch
-const sortedCoins = [...coins]
-  .sort((a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h)
-  .slice(0, 30);
+    const sortedCoins = [...coins]
+        .sort((a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h)
+        .slice(0, 30);
 
-const filteredCoins = sortedCoins.filter((coin) =>
-  coin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  coin.symbol.toLowerCase().includes(searchTerm.toLowerCase())
-);
+    const filteredCoins = sortedCoins.filter((coin) =>
+        coin.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        coin.symbol.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     const handleCoinClick = (coinId) => {
         navigate(`/coin/${coinId}`);
@@ -83,7 +83,7 @@ const filteredCoins = sortedCoins.filter((coin) =>
                                 <div>
                                     <p className="font-bold">${coin.current_price.toLocaleString()}</p>
                                     <p className={coin.price_change_percentage_24h > 0 ? 'text-green-500' : 'text-red-500'}>
-                                        {coin.price_change_percentage_24h.toFixed(2)}%
+                                        {coin.price_change_percentage_24h ? coin.price_change_percentage_24h.toFixed(2) : '0.00'}%
                                     </p>
                                 </div>
                                 <p>{coin.total_volume.toLocaleString()}</p>
